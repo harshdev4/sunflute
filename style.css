@@ -10,19 +10,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--dark-green);
-    font-family: "Patua One", serif;
     font-weight: 400;
-    font-style: normal;
 }
 
 body {
-    font-size: 16px; /* Base font size */
+    font-size: 16px;
+    color: var(--dark-green);
+    font-family: "Patua One", serif;
+    font-style: normal;
 }
 
 p{
     font-family: var(--secondary-font-family);
-    font-size: 20px;
+    font-size: 1.3rem;
     line-height: 1.4;
 }
 
@@ -92,8 +92,9 @@ p{
 }
 
 section {
-    padding: 2rem 3rem;
+    padding: 2.2rem 3rem;
     background-color: var(--section-area-color);
+    width: 100%;
 }
 
 .aboutGrid {
@@ -171,6 +172,92 @@ section {
     font-size: 16px;
 }
 
+.communitySection > h2.heading{
+    text-align: center;
+}
+
+.peopleContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.people{
+    max-width: 28%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.imageContainer{
+    position: relative;
+}
+
+.svgIcon{
+    width: 200px;
+    height: 200px;
+}
+
+.peopleImage{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+}
+
+footer{
+    color: white;
+    background-color: var(--dark-green);
+    padding: 20px;
+}
+
+footer h2.heading{
+    text-align: center;
+}
+
+.footerLink{
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    row-gap: 20px;
+    margin: 30px 0;
+}
+
+.footerLink > *{
+    display: inline;
+    cursor: pointer;
+}
+
+.copyright{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+#copyright{
+    font-family: var(--secondary-font-family);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.copyrightLogo{
+    font-size: 13px;
+}
+
 @media (max-width: 599px) {
     .hero {
         height: 500px;
@@ -216,7 +303,7 @@ section {
     }
 
     p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .aboutGrid {
@@ -239,6 +326,15 @@ section {
     .box {
         max-width: 100%;
     }
+
+    .people{
+        max-width: 100%;
+    }
+
+    .footerLink{
+        width: 100%;
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
@@ -254,13 +350,17 @@ section {
         font-size: 3.3rem;
     }
 
+    section{
+        padding: 2rem;
+    }
+
     .aboutTextContainer > p {
         max-width: 100%;
         font-size: 0.7rem;
     }
 
     p{
-        font-size: 20px;
+        font-size: 1.3rem;
     }
 
     .boxContainer {
@@ -274,5 +374,13 @@ section {
 
     .complimentingPara{
         font-size: 0.7rem;
+    }
+
+    .peopleContainer{
+        justify-content: center;
+    }
+
+    .people{
+        max-width: 70%;
     }
 }
